@@ -1,0 +1,46 @@
+yum install epel-release -y
+yum install nginx -y
+yum -y install policycoreutils-python
+
+touch /home/vagrant/.ssh/id_rsa.pub
+echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwyJevKVYrjmT4eJZX0Z1Hm/LKsiSE+eDkrndG5Gz/qU/42C9lcqe61OAPcNI5o6lHXoAX0X/zlDQNsx8NtK49UnjY9nvE/jGLPonSqBOa2KIPxQcCYYYsWSeRmEinPqG5GPCGQqm6m69AGwBBVU3ztivZDz20DYejeuOSllXrh7vPZ8e8MK+7ma9arLYuqljERGhB7ep6SWWnhjIc9ahGftgioUSN20BlXLrXsBC/mGABeebo5qbYqP9KuR46BCCBddM8R9qVI1LP+XlFq+w11qRgC2XoTm2eGBKoszL8QkdpGu1ahjvoe/dNMTHLdf5KkkbkJtNM9qLBeGXRO6Np vagrant@ansible' > /home/vagrant/.ssh/id_rsa.pub
+
+touch /home/vagrant/.ssh/id_rsa
+echo '-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEAsMiXrylWK45k+HiWV9GdR5vyyrIkhPng5K53RuRs/6lP+Ngv
+ZXKnutTgD3DSOaOpR16AF9F/85Q0DbMfDbSuPVJ42PZ7xP4xiz6J0qgTmtiiD8UH
+AmGGLFknkZhIpz6huRjwhkKpupuvQBsAQVVN87Yr2Q89tA2Ho3rjkpZV64e7z2fH
+vDCvu5mvWqy2LqpYxERoQe3qekllp4YyHPWoRn7YIqFEjdtAZVy617AQv5hgAXnm
+6Oam2Kj/SrkeOgQggXXTPEfalSNSz/l5RavsNdakYAtl6E5tnhgSqLMy/EJHaRrt
+WoY76Hv3TTExy3X+SpJG5CbTTPaiwXhl0TujaQIDAQABAoIBAQCQsGztkTCUz6O2
+dcPfNpG61VmfKrSXHYlCwcSgAj9v9JyeuBn6tx+u26JTIOz+/gODhUXjuLU3oDoG
+aG9nIVVmnUSJlxtv/PiB1fqprqT1HI9vxrvY6AcP7xxinrgAIlPtEgtyZ8dREzEZ
+j7/iuTXm3Vf//OhsoJI+bEssY90Iup9/EnYrfQKJWDrqGD0YUidFfol76LSejz3K
+97MHSgMGycMN1lQO67F27CYqUA3dLumomsWtxN6FMLkuTegbinBiMqFnQrlIcs+z
+ndeXw6gbH949R04EfjQ6xRzuMShwCDhn5GQOcyxM5a7yB/2/5jyKO7/0ra6glmbp
+N2596N/xAoGBAN/Nk/GXZCFRx57C4Z95XFYPnTqMS/rVCwJ+g5bPqdBIrcwohB+a
+P1V0BZEBVTZcIUy8g4Vb1YYBfTQlbRaa6A5RzUuxtMz+4W5Yj8YdmFoIrvnk84QB
+MqLU5w3gLhu4svv7T6LHaz8Cu+J4QZ+ykq6lG9hD65B6vmi2dH7Bgt0dAoGBAMo3
+Vq6mfD35NglFKLLQZdoVJH55kWHOUVjucVPJ5UOCt3sADwlyFdtmalR4G7+QrDb0
+7sDFtflgDd8+QLPK6Q+0xHJSmG8cQjAI1TUc4iae/gNoqxQ4xHpWmnZStiGvu8Eo
+9Y2nqjYgPTr//+13HUcQGLODImdTa3kYpijeq+m9AoGBAJzrKIMpMfTGwV9IpyfI
+0PwqoIRPoGpz++84w4z3d8ppWyqdcd4yqZuB6PE97QBbYqHKP7E+rZzy6FWqtC04
+WeLIalhbdjiRsYBMKiqvz4W5Nu5SIIf6ywUun/6zo8CeJSjWkYTBrCmXAiONS/3s
+GDrJ25csMDuyRFVpMI87oUTlAoGAFkyR74KGcuMXdWA+A7H9eVYZhyTqxklVKSRq
+NN4vvQkeKJ8yCU2eYWpi0VvJW4+dnhXWekWTMqPIA9U+l1UJ7GR3wU+gZahNGDTx
+JgFAYxfnVQLm0r0L1Z3VPLUURpS1dLCKm4tgtsVJW0c9trcK8Hoy7yDH23MUh+8S
+67DablUCgYEAyzqV0gBmnFjQm0XmNqOmPfMd/SI74RrkOo19OSAG3LpjiXjIo4JM
+Bzmmwn53dKOB9FldRmZpiUDYvINUM8VGfeTLreqA9CmUvhfBez9o9Rp+i2B9dxwa
+4OJAhS89SyeqF5Yvn4X2/9QYEzlatc1mGbAfb3ccEc1IbkCQXyI2Z/Q=
+-----END RSA PRIVATE KEY-----' > /home/vagrant/.ssh/id_rsa
+
+echo '
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwyJevKVYrjmT4eJZX0Z1Hm/LKsiSE+eDkrndG5Gz/qU/42C9lcqe61OAPcNI5o6lHXoAX0X/zlDQNsx8NtK49UnjY9nvE/jGLPonSqBOa2KIPxQcCYYYsWSeRmEinPqG5GPCGQqm6m69AGwBBVU3ztivZDz20DYejeuOSllXrh7vPZ8e8MK+7ma9arLYuqljERGhB7ep6SWWnhjIc9ahGftgioUSN20BlXLrXsBC/mGABeebo5qbYqP9KuR46BCCBddM8R9qVI1LP+XlFq+w11qRgC2XoTm2eGBKoszL8QkdpGu1ahjvoe/dNMTHLdf5KkkbkJtNM9qLBeGXRO6Np vagrant@ansible' >> /home/vagrant/.ssh/authorized_keys
+
+yum install vim -y
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -y
+yum install ansible -y
+
+echo '[web]
+client ansible_host=192.168.50.15 ansible_user=vagrant
+ns01 ansible_host=192.168.50.10 ansible_user=vagrant' > /etc/ansible/hosts
